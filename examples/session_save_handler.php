@@ -1,4 +1,16 @@
 <?PHP
+/**
+ * Example that show the use of the session save handler
+ *
+ * @category    HTTP
+ * @package     HTTP_SessionServer
+ * @subpackage  Examples
+ * @author      Stephan Schmidt <schst@php.net>
+ */
+ 
+/**
+ * load the save handler functions
+ */
 require_once 'HTTP/SessionServer/SaveHandler.php';
 
 session_save_path('localhost:9090');

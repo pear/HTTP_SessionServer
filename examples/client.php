@@ -1,4 +1,16 @@
 <?PHP
+/**
+ * Example that show the use of the HTTP_SessionServer_Client
+ *
+ * @category    HTTP
+ * @package     HTTP_SessionServer
+ * @subpackage  Examples
+ * @author      Stephan Schmidt <schst@php.net>
+ */
+
+/**
+ * needs the client implementation
+ */
 require_once 'HTTP/SessionServer/Client.php';
 
 $session = &new HTTP_SessionServer_Client('localhost', 9090);

@@ -1,6 +1,18 @@
 <?PHP
+/**
+ * Example that show the use of the HTTP_SessionServer_Client
+ *
+ * @category    HTTP
+ * @package     HTTP_SessionServer
+ * @subpackage  Examples
+ * @author      Carsten Lucke <luckec@php.net>
+ */
+
 error_reporting(E_ALL);
 
+/**
+ * needs the server
+ */
 require_once 'HTTP/SessionServer.php';
 
 $options = array(
