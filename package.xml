@@ -4,7 +4,7 @@
   <name>HTTP_SessionServer</name>
   <summary>Daemon to store session data that can be accessed via a simple protocol.</summary>
   <description>HTTP_SessionServer is a simple PHP based daemon that helps you maintaining state between physically different hosts.
-HTTP_SessionServer implements a very simple protocol to store and retrieve data on the server. The storage backend is driver based, currently only a storage for the filesystem has been implemented, but you may easily change this.
+HTTP_SessionServer implements a very simple protocol to store and retrieve data on the server. The storage backend is driver based and supports your local filesystem as well as PEAR::DB as a container.
 HTTP_SessionServer comes with a matching client implementation using Net_Socket as well as a session save handler.</description>
   <maintainers>
     <maintainer>
@@ -13,28 +13,38 @@ HTTP_SessionServer comes with a matching client implementation using Net_Socket 
       <email>schst@php-tools.net</email>
       <role>lead</role>
     </maintainer>
+    <maintainer>
+      <user>luckec</user>
+      <name>Carsten Lucke</name>
+      <email>luckec@php.net</email>
+      <role>developer</role>
+    </maintainer>
   </maintainers>
   <release>
-    <version>0.3.0</version>
-    <date>2004-10-28</date>
+    <version>0.4.0</version>
+    <date>2005-01-03</date>
     <license>PHP License</license>
     <state>alpha</state>
-    <notes>Initial PEAR release.</notes>
+    <notes>- Added storage container based on PEAR::DB (luckec)
+- Added docblocks in examples (schst)</notes>
     <deps>
       <dep type="pkg" rel="has" optional="no">PEAR</dep>
       <dep type="php" rel="ge" version="4.3.0" optional="no"/>
       <dep type="pkg" rel="ge" version="0.12.0" optional="no">Net_Server</dep>
       <dep type="pkg" rel="has" optional="no">Net_Socket</dep>
       <dep type="ext" rel="has" optional="no">pcntl</dep>
+      <dep type="pkg" rel="has" optional="yes">DB</dep>
     </deps>
     <filelist>
       <dir baseinstalldir="HTTP" name="/">
        <dir name="docs">
         <file role="doc" name="protocol.txt"/>
+        <file role="doc" name="storage_database.sql"/>
        </dir> <!-- docs -->
        <dir name="examples">
         <file role="doc" name="client.php"/>
         <file role="doc" name="server.php"/>
+        <file role="doc" name="server_db.php"/>
         <file role="doc" name="session_save_handler.php"/>
        </dir> <!-- examples -->
        <dir name="SessionServer">
@@ -42,6 +52,7 @@ HTTP_SessionServer comes with a matching client implementation using Net_Socket 
         <file role="php" name="SaveHandler.php"/>
         <file role="php" name="Storage.php"/>
         <dir name="Storage">
+         <file role="php" name="DB.php"/>
          <file role="php" name="Filesystem.php"/>
         </dir> <!-- SessionServer/Storage -->
        </dir> <!-- SessionServer -->
@@ -58,18 +69,19 @@ HTTP_SessionServer comes with a matching client implementation using Net_Socket 
       <notes>PEAR proposal.</notes>
     </release>
     <release>
-      <version>0.3</version>
+      <version>0.3.0</version>
       <date>2004-10-28</date>
       <license>PHP License</license>
       <state>alpha</state>
       <notes>Initial PEAR release.</notes>
     </release>
     <release>
-      <version>0.3.0</version>
-      <date>2004-10-28</date>
+      <version>0.4.0</version>
+      <date>2005-01-03</date>
       <license>PHP License</license>
       <state>alpha</state>
-      <notes>Initial PEAR release.</notes>
+      <notes>- Added storage container based on PEAR::DB (luckec)
+- Added docblocks in examples (schst)</notes>
     </release>
   </changelog>
 </package>

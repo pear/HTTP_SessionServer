@@ -18,7 +18,7 @@ require_once 'PEAR/PackageFileManager.php';
 /**
  * current version
  */
-$version = '0.3.0';
+$version = '0.4.0';
 
 /**
  * current state
@@ -29,7 +29,8 @@ $state = 'alpha';
  * release notes
  */
 $notes = <<<EOT
-Initial PEAR release.
+- Added storage container based on PEAR::DB (luckec)
+- Added docblocks in examples (schst)
 EOT;
 
 /**
