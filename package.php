@@ -18,7 +18,7 @@ require_once 'PEAR/PackageFileManager.php';
 /**
  * current version
  */
-$version = '0.3';
+$version = '0.3.0';
 
 /**
  * current state
@@ -29,17 +29,16 @@ $state = 'alpha';
  * release notes
  */
 $notes = <<<EOT
-- did some cleanup and improved error handling in the server
-- added functions that can be used with session_set_save_handler()
-- added get_all and put_all commands
+Initial PEAR release.
 EOT;
 
 /**
  * package description
  */
 $description = <<<EOT
-HTTP_SessionServer is a daemon that supports a simple protocol to store session data.
-This enables you to access the data from different servers, applications and programming languages.
+HTTP_SessionServer is a simple PHP based daemon that helps you maintaining state between physically different hosts.
+HTTP_SessionServer implements a very simple protocol to store and retrieve data on the server. The storage backend is driver based, currently only a storage for the filesystem has been implemented, but you may easily change this.
+HTTP_SessionServer comes with a matching client implementation using Net_Socket as well as a session save handler.
 EOT;
 
 $package = new PEAR_PackageFileManager();
