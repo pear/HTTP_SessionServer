@@ -68,12 +68,14 @@ if (PEAR::isError($result)) {
 }
 
 $package->addMaintainer('schst', 'lead', 'Stephan Schmidt', 'schst@php-tools.net');
+$package->addMaintainer('luckec', 'developer', 'Carsten Lucke', 'luckec@php.net');
 
 $package->addDependency('PEAR', '', 'has', 'pkg', false);
 $package->addDependency('php', '4.3.0', 'ge', 'php', false);
 $package->addDependency('Net_Server', '0.12.0', 'ge', 'pkg', false);
 $package->addDependency('Net_Socket', '', 'has', 'pkg', false);
 $package->addDependency('pcntl', '', 'has', 'ext', false);
+$package->addDependency('DB', '', 'has', 'pkg', true);
 
 if (isset($_GET['make']) || (isset($_SERVER['argv'][1]) && $_SERVER['argv'][1] == 'make')) {
     $result = $package->writePackageFile();
