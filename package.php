@@ -37,7 +37,7 @@ EOT;
  */
 $description = <<<EOT
 HTTP_SessionServer is a simple PHP based daemon that helps you maintaining state between physically different hosts.
-HTTP_SessionServer implements a very simple protocol to store and retrieve data on the server. The storage backend is driver based and supports a filsystem as well as databases as a container.
+HTTP_SessionServer implements a very simple protocol to store and retrieve data on the server. The storage backend is driver based and supports your local filesystem as well as PEAR::DB as a container.
 HTTP_SessionServer comes with a matching client implementation using Net_Socket as well as a session save handler.
 EOT;
 
