@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE package SYSTEM "http://pear.php.net/dtd/package-1.0">
+<package version="1.0">
+  <name>HTTP_SessionServer</name>
+  <summary>Daemon to store session data that can be accessed via a simple protocol.</summary>
+  <description>HTTP_SessionServer is a daemon that supports a simple protocol to store session data.
+This enables you to access the data from different servers, applications and programming languages.</description>
+  <maintainers>
+    <maintainer>
+      <user>schst</user>
+      <name>Stephan Schmidt</name>
+      <email>schst@php-tools.net</email>
+      <role>lead</role>
+    </maintainer>
+  </maintainers>
+  <release>
+    <version>0.3</version>
+    <date>2004-10-15</date>
+    <license>PHP License</license>
+    <state>alpha</state>
+    <notes>- did some cleanup and improved error handling in the server
+- added functions that can be used with session_set_save_handler()
+- added get_all and put_all commands</notes>
+    <deps>
+      <dep type="pkg" rel="has" optional="no">PEAR</dep>
+      <dep type="php" rel="ge" version="4.3.0" optional="no"/>
+      <dep type="pkg" rel="ge" version="0.12.0" optional="no">Net_Server</dep>
+      <dep type="pkg" rel="has" optional="no">Net_Socket</dep>
+      <dep type="ext" rel="has" optional="no">pcntl</dep>
+    </deps>
+    <filelist>
+      <dir baseinstalldir="HTTP" name="/">
+       <dir name="docs">
+        <file role="doc" name="protocol.txt"/>
+       </dir> <!-- docs -->
+       <dir name="examples">
+        <file role="doc" name="client.php"/>
+        <file role="doc" name="server.php"/>
+        <file role="doc" name="session_save_handler.php"/>
+       </dir> <!-- examples -->
+       <dir name="SessionServer">
+        <file role="php" name="Client.php"/>
+        <file role="php" name="SaveHandler.php"/>
+        <file role="php" name="Storage.php"/>
+        <dir name="Storage">
+         <file role="php" name="Filesystem.php"/>
+        </dir> <!-- SessionServer/Storage -->
+       </dir> <!-- SessionServer -->
+       <file role="php" name="SessionServer.php"/>
+      </dir> <!-- / -->
+    </filelist>
+  </release>
+  <changelog>
+    <release>
+      <version>0.2</version>
+      <date>2004-10-05</date>
+      <license>PHP License</license>
+      <state>alpha</state>
+      <notes>PEAR proposal.</notes>
+    </release>
+    <release>
+      <version>0.3</version>
+      <date>2004-10-15</date>
+      <license>PHP License</license>
+      <state>alpha</state>
+      <notes>- did some cleanup and improved error handling in the server
+- added functions that can be used with session_set_save_handler()
+- added get_all and put_all commands</notes>
+    </release>
+  </changelog>
+</package>

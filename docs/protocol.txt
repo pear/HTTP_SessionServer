@@ -1,0 +1,18 @@
+HTTP_SessionServer protocol
+---------------------------
+$Id$
+
+Supported commands:
+
+string  new                                : create and open a new session
+void    open string $sid string $mode      : open existing session
+void    close                              : close session
+void    destroy                            : destroy current session
+array   keys                               : get all keys in the session
+
+void    put string $key mixed $val         : store a value
+mixed   get string $key                    : retrieve a value
+void    remove string $key                 : delete a value
+bool    exists string $key                 : check, whether value exists
+string  regenerate_id                      : create a new session id
+void    commit                             : commit the session (change to readonly mode)
