@@ -18,7 +18,7 @@ require_once 'PEAR/PackageFileManager.php';
 /**
  * current version
  */
-$version = '0.4.0';
+$version = '0.5.0';
 
 /**
  * current state
@@ -29,8 +29,8 @@ $state = 'alpha';
  * release notes
  */
 $notes = <<<EOT
-- Added storage container based on PEAR::DB (luckec)
-- Added docblocks in examples (schst)
+- Added storage container based on PEAR::MDB2 (lsmith)
+- Fixed typo in DB driver (schst)
 EOT;
 
 /**
@@ -70,6 +70,7 @@ if (PEAR::isError($result)) {
 
 $package->addMaintainer('schst', 'lead', 'Stephan Schmidt', 'schst@php-tools.net');
 $package->addMaintainer('luckec', 'developer', 'Carsten Lucke', 'luckec@php.net');
+$package->addMaintainer('lsmith', 'contributor', 'Lukas Smith', 'lsmith@php.net');
 
 $package->addDependency('PEAR', '', 'has', 'pkg', false);
 $package->addDependency('php', '4.3.0', 'ge', 'php', false);
@@ -77,6 +78,7 @@ $package->addDependency('Net_Server', '0.12.0', 'ge', 'pkg', false);
 $package->addDependency('Net_Socket', '', 'has', 'pkg', false);
 $package->addDependency('pcntl', '', 'has', 'ext', false);
 $package->addDependency('DB', '', 'has', 'pkg', true);
+$package->addDependency('MDB2', '2.0.0RC1', 'ge', 'pkg', true);
 
 if (isset($_GET['make']) || (isset($_SERVER['argv'][1]) && $_SERVER['argv'][1] == 'make')) {
     $result = $package->writePackageFile();
