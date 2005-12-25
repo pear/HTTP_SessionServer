@@ -198,7 +198,7 @@ class HTTP_SessionServer_Storage_DB extends HTTP_SessionServer_Storage
             return false;
         }
         
-        $qry    = sprintf('DELET FROM %s WHERE %s = %s',
+        $qry    = sprintf('DELETE FROM %s WHERE %s = %s',
                 $this->_options['table'], $this->_options['col_sid'], 
                 $this->_dbc->quoteSmart($this->_sid));
         $result = $this->_dbc->query($qry);
