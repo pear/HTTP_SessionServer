@@ -70,7 +70,6 @@ if (PEAR::isError($result)) {
 
 $package->addMaintainer('schst', 'lead', 'Stephan Schmidt', 'schst@php-tools.net');
 $package->addMaintainer('luckec', 'developer', 'Carsten Lucke', 'luckec@php.net');
-$package->addMaintainer('lsmith', 'contributor', 'Lukas Smith', 'lsmith@php.net');
 
 $package->addDependency('PEAR', '', 'has', 'pkg', false);
 $package->addDependency('php', '4.3.0', 'ge', 'php', false);

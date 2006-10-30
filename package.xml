@@ -20,12 +20,6 @@ HTTP_SessionServer comes with a matching client implementation using Net_Socket 
    <email>luckec@php.net</email>
    <role>developer</role>
   </maintainer>
-  <maintainer>
-   <user>lsmith</user>
-   <name>Lukas Smith</name>
-   <email>lsmith@php.net</email>
-   <role>contributor</role>
-  </maintainer>
   </maintainers>
  <release>
   <version>0.5.0</version>
