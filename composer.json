@@ -1,0 +1,25 @@
+{
+    "authors": [
+        {
+            "email": "schst@php-tools.net",
+            "name": "Stephan Schmidt",
+            "role": "Lead"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
+    },
+    "description": "More info available on: http://pear.php.net/package/HTTP_SessionServer",
+    "license": "PHP License",
+    "name": "pear/http_sessionserver",
+    "support": {
+        "issues": "http:///bugs/search.php?cmd=display&package_name[]=HTTP_SessionServer",
+        "source": "https://github.com/pear/HTTP_SessionServer"
+    },
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
